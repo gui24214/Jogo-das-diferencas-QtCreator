@@ -1,0 +1,49 @@
+# Build files
+build/
+CMakeFiles/
+CMakeCache.txt
+*.cmake
+Makefile
+
+# Qt generated files
+*.qmake.stash
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.qmlc
+*.jsc
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+
+# Object and binary files
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+*.exe
+
+# Debug / Release folders
+debug/
+release/
+x64/
+x86/
+
+# IDE / Editor settings
+.vscode/
+*.user
+*.suo
+*.ncb
+*.sdf
+*.opendb
+*.VC.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*~
