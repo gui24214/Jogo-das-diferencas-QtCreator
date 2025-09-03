@@ -38,3 +38,25 @@ Projeto desenvolvido em C++ com Qt Creator.
 ## 🎵 Áudio
 - Música ambiente que acompanha todo o jogo.  
 - Efeitos sonoros ativados em cada interação.  
+
+### Estrutura do Projeto
+
+jogo-diferencas-qt/
+├── src/ # Código-fonte C++/Qt
+├── assets/ # Imagens, sons e recursos do jogo
+├── build/ # Pasta de build (não incluída no GitHub)
+└── docs/ # Prints e documentação
+
+## Tecnologias
+- C++ com **Qt Creator**
+- Interface gráfica Qt Widgets
+- Recursos multimédia (música e efeitos sonoros)
+
+## Como executar
+1. Abrir o projeto no **Qt Creator**
+2. Certificar-se que o **Qt** e compilador C++ estão instalados
+3. Selecionar a configuração (ex.: Desktop Qt 6.x.x MinGW/MSVC)
+4. Compilar e executar o projeto
+
+## Autor
+gui24214
