@@ -1,0 +1,62 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Game.qml</file>
+        <file>Settings.qml</file>
+        <file>main.qml</file>
+        <file>GuilhermeButton.qml</file>
+        <file>Card.qml</file>
+        <file>Level4.qml</file>
+        <file>Level5.qml</file>
+        <file>Level6.qml</file>
+        <file>Level7.qml</file>
+        <file>Level8.qml</file>
+        <file>Level9.qml</file>
+        <file>Level10.qml</file>
+        <file>Proto.qml</file>
+        <file>assets.qrc</file>
+        <file>Testes.qml</file>
+        <file>Tuturial.qml</file>
+        <file>Imagens/tutorial .jpg</file>
+        <file>Imagens/level7.png</file>
+        <file>Imagens/0_stars.png</file>
+        <file>Imagens/1_stars.png</file>
+        <file>Imagens/2_stars (3).png</file>
+        <file>Imagens/2_stars.png</file>
+        <file>Imagens/3_stars.png</file>
+        <file>Imagens/carrinho.png</file>
+        <file>Imagens/coracao.png</file>
+        <file>Imagens/ice-removebg-preview.png</file>
+        <file>Imagens/iconmusic.png</file>
+        <file>Imagens/level1.jpg</file>
+        <file>Imagens/level2.jpg</file>
+        <file>Imagens/level3.jpg</file>
+        <file>Imagens/level4.jpg</file>
+        <file>Imagens/level5.jpg</file>
+        <file>Imagens/level6.jpg</file>
+        <file>Imagens/level6.png</file>
+        <file>Imagens/level7_2.png</file>
+        <file>Imagens/level8.jpg</file>
+        <file>Imagens/level8_2.jpg</file>
+        <file>Imagens/level9.jpg</file>
+        <file>Imagens/level9_2.jpg</file>
+        <file>Imagens/level10.jpg</file>
+        <file>Imagens/level10_2.jpg</file>
+        <file>Imagens/NotVisible.png</file>
+        <file>Imagens/olho.png</file>
+        <file>Imagens/settings.png</file>
+        <file>Imagens/soundof.png</file>
+        <file>Imagens/soundon.png</file>
+        <file>Imagens/Toutch.png</file>
+        <file>Imagens/visible.png</file>
+        <file>Sounds/Music/Wallpaper(chosic.com).mp3</file>
+        <file>Sounds/Souds/mixkit-arcade-bonus-229.wav</file>
+        <file>Sounds/Souds/mixkit-classic-click-1117.wav</file>
+        <file>Sounds/Souds/mixkit-click-error-1110.wav</file>
+        <file>Sounds/Souds/mixkit-correct-positive-notification-957.wav</file>
+        <file>Sounds/Souds/mixkit-ethereal-fairy-win-sound-2019.wav</file>
+        <file>Sounds/Souds/mixkit-game-click-1114.wav</file>
+        <file>Sounds/Souds/mixkit-game-success-alert-2039.wav</file>
+        <file>Sounds/Souds/mixkit-player-losing-or-failing-2042.wav</file>
+        <file>Sounds/Souds/mixkit-water-sci-fi-bleep-902.wav</file>
+    </qresource>
+</RCC>

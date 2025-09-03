@@ -1,109 +1,113 @@
 import QtQuick
 import Qt5Compat.GraphicalEffects
-
+import QtMultimedia
 
 Window {
-
-    width: 1920
-    height: 1080
+    id:window
+    width: 1300
+    height: 700
     visible: true
-    title: qsTr("Hello World")
-    color: "darkgreen"
+    title: qsTr("Jogo das Diferenças")
 
-    Row {
+    property bool showGame: false
+    property bool showSettings: false
 
-        id:_lista
-        property var nipes: ["Copas","Paus","Ouros","Espadas"]
-        property var imagens: ["https://upload.wikimedia.org/wikipedia/commons/a/a0/Naipe_copas.png","https://upload.wikimedia.org/wikipedia/commons/5/59/Naipe_paus.png","https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Naipe_ouros.png/216px-Naipe_ouros.png","https://upload.wikimedia.org/wikipedia/commons/e/e7/Spades.svg"]
-        property var txt:["AS","Rei,","valete","dama"]
-        anchors.centerIn: parent
-        spacing: 40
+    Rectangle {
+        anchors.fill: parent
+        color: "#D8C753"
+    }
 
-        Repeater {
+    Text {
+        id: _txtgame
+        anchors.horizontalCenter: parent.horizontalCenter
+        y: 300
+        text: "Jogo das Diferenças"
+        color: "white"
+        font.bold: true
+        font.pixelSize: 100
+        font.family: "Courier New"
+    }
 
-            model: _lista.nipes
-            delegate:
+    Rectangle {
+        id: _newsettings
+        width: 300
+        height: 80
+        radius: 50
+        color : "black"
+        visible: true
+        anchors.top: _txtgame.bottom
+        anchors.topMargin: 20
+        anchors.horizontalCenter: parent.horizontalCenter
 
-                Rectangle {
+        Text {
+            id:play
+            text: "Play"
+            anchors.centerIn: parent
+            font.bold: true
+            font.pixelSize: 30
+            font.family: "Courier New"
+            color: "white"
+        }
 
-                id: _button
-                width: 300
-                height: 500
-                color: "white"
-                radius: 15
-                layer.enabled: true
-                layer.effect: Glow {
-                    color: "#20000000"
-                    radius: 8
-                    samples: 25
-                }
-                Behavior on y { NumberAnimation{duration:1500} }
-                Behavior on rotation{ NumberAnimation{duration:500} }
-
-
-
-
-                Text {
-                    id:_aa
-                    text: modelData
-                    anchors.centerIn: parent
-                    color: index % 2 === 0? "red" : "black"
-                    font.pixelSize: 30
-                    font.bold: true
-                }
-
-                Image  {
-                source: _lista.imagens[index]
-                width: 50
-                height: 50
-                anchors.top: _aa.bottom
-                anchors.topMargin: 40
-                anchors.horizontalCenter: parent.horizontalCenter
-
-                }
-
-
-
-                Text {
-                    id: _A
-                    text: qsTr("A")
-                    color: index % 2 === 0? "red" : "black"
-                    font.pixelSize: 15
-                    font.bold: true
-                    anchors.left: parent.left
-                    anchors.bottomMargin: 15
-                    anchors.leftMargin: 10
-                }
-
-
-                Text {
-                    id: _A1
-                    text: qsTr("A")
-                    color: index % 2 === 0? "red" : "black"
-                    font.pixelSize: 15
-                    font.bold: true
-                    anchors.bottom: parent.bottom
-                    anchors.right: parent.right
-                    anchors.bottomMargin: 10
-                    anchors.rightMargin: 10
-                    rotation: 180
-
-
-                }
-                MouseArea {
-
-                    anchors.fill: parent
-                    onClicked: {
-                        index % 2 === 0 ? parent.y = -1000 : parent.y = 2000
-                        index % 2 === 0 ? parent.rotation = 720 : parent.rotation = -720
-
-                    }
-                }
-
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                showSettings = true
+                click.play()
             }
+        }
+    }
 
+    MediaPlayer {
+        id: sounddiference
+        source: "file:///C:/Users/anton/Desktop/Estagio/Projectos/QML/dif - Copy2-20240512T133413Z-001/dif - Copy2/Sounds/Souds/mixkit-correct-positive-notification-957.wav"
+        loops: 0
+        audioOutput: AudioOutput {
+            volume: 1
+        }
+    }
+
+    MediaPlayer {
+        id: click
+        source: "file:///C:/Users/guilh/Downloads/06-20250808T012321Z-1-001/Backup --30- 06/dif - Copy2-20240528T214048Z-001/dif - Copy2/Sounds/Souds/mixkit-classic-click-1117.wav"
+        loops: 0
+        audioOutput: AudioOutput {
+            volume: 0.25
+        }
+    }
+
+    MediaPlayer {
+        id: dicaclick
+        source: "file:///C:/Users/guilh/Downloads/06-20250808T012321Z-1-001/Backup --30- 06/dif - Copy2-20240528T214048Z-001/dif - Copy2/Sounds/Souds/mixkit-arcade-bonus-229.wav"
+        loops: 0
+        audioOutput: AudioOutput {
+            volume: 1
+        }
+    }
+
+    MediaPlayer {
+        id: winclick
+        source: "file:///C:/Users/guilh/Downloads/06-20250808T012321Z-1-001/Backup --30- 06/dif - Copy2-20240528T214048Z-001/dif - Copy2/Sounds/Souds/mixkit-ethereal-fairy-win-sound-2019.wav"
+        loops: 0
+        audioOutput: AudioOutput {
+            volume: 1
+        }
+    }
+
+    MediaPlayer {
+        id: music
+        source: "file:///C:/Users/guilh/Downloads/06-20250808T012321Z-1-001/Backup --30- 06/dif - Copy2-20240528T214048Z-001/dif - Copy2/Sounds/Music/Wallpaper(chosic.com).mp3"
+        loops: 100
+        audioOutput: AudioOutput {
+            volume: 0.05
+        }
+    }
+    Settings {
+        id: _sets
+        anchors.fill: parent
+        visible: showSettings
+        onBack: {
+            showSettings = false;
         }
     }
 }
-
-
